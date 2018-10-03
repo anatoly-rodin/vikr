@@ -1,0 +1,19 @@
+.form {
+    border: 1px solid #eee;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    border-radius: 5px;
+
+    &-add {
+
+        &__dates {
+            display: flex;
+            justify-content: space-between;
+
+            & > div {
+                width: 45%;
+            }
+        }
+    }
+}

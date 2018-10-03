@@ -1,0 +1,17 @@
+const ADMIN = 'ROLE_ADMIN';
+const USER = 'ROLE_USER';
+const OPERATOR = 'ROLE_OPERATOR';
+const SERVICE_ADMIN = 'ROLE_SERVICE_ADMIN';
+const OWNER = 'ROLE_OWNER';
+const BANK = 'ROLE_BANK';
+const DEVELOPER = 'ROLE_DEVELOPER';
+
+export {
+    ADMIN,
+    USER,
+    OPERATOR,
+    SERVICE_ADMIN,
+    OWNER,
+    BANK,
+    DEVELOPER
+};
