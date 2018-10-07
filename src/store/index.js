@@ -140,12 +140,23 @@ const store = new Vuex.Store({
             Account.signUp(payload)
                 .then(
                     ({data}) => {
-                        alert('Пользователь создан.');
+                        alert('Пользователь создан.\nНа указанный почтовый ящик выслано письмо с подверждением регистрации.');
                         commit('switchLoading', false);
-                        router.push({name: 'Signin'});
+                        router.push({name: 'SignIn'});
                     })
-                .catch(() => {
-                    alert('Ошибка регистрации');
+                .catch((data) => {
+                    let result = '';
+                    
+                    if (Object.keys(data.response.data).length) {
+                        for (let prop in data.response.data) {
+                            result += data.response.data[prop][0] + '\n';
+                        }
+  
+                        alert(result);
+                    } else {
+                        alert('Ошибка регистрации');
+                    }
+                    
                     commit('switchLoading', false);
                 });
         },
